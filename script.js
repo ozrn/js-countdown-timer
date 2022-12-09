@@ -5,6 +5,8 @@ function timer(seconds){
 
     const then = now + (seconds * 1000);
 
+    displayTimeLeft(seconds); // runs setInterval immediately without waiting elapsed time
+
     countdown = setInterval(() => {
         const secondsLeft = Math.round((then - Date.now()) / 1000);
 
@@ -13,8 +15,12 @@ function timer(seconds){
             return; 
         }
 
-        console.log(secondsLeft);
+        displayTimeLeft(secondsLeft);
 
     }, 1000);
+}
+
+function displayTimeLeft(seconds){
+    console.log(seconds);
 }
 

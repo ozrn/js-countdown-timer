@@ -21,6 +21,11 @@ function timer(seconds){
 }
 
 function displayTimeLeft(seconds){
-    console.log(seconds);
+    const mins = Math.floor(seconds / 60); // converts seconds to mins
+
+    const remainderSecs = seconds % 60; // converts seconds to remaining secondsgit 
+
+    console.log(mins, remainderSecs);
+
 }
 

@@ -4,6 +4,8 @@ const endTimeDisplay = document.querySelector(".display__end-time");
 const allButtons = document.querySelectorAll("[data-time]");
 
 function timer(seconds){
+    clearInterval(countdown); // clears any existing timers to start counting a new one!
+
     const now = Date.now(); // the value is in milliseconds
 
     const then = now + (seconds * 1000);

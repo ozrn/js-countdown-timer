@@ -49,7 +49,7 @@ function displayEndTime(timestamp){
 
 function startTimer(){
     const secs = parseInt(this.dataset.time); // turns it into a real number
-    console.log(secs);
+    timer(secs);
 }
 
 allButtons.forEach(button => button.addEventListener("click", startTimer));
